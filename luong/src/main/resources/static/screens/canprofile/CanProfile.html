@@ -1,0 +1,218 @@
+<div class="card-body">
+	<div class="tab-content" id="custom-tabs-one-tabContent">
+		<div class="tab-pane show active" id="custom-tabs-one-nluc"
+			role="tabpanel" aria-labelledby="custom-tabs-one-nluc-tab">
+			<section class="content">
+
+				<div class="card card-success">
+					<!--Titleform-->
+					<div class="card-header">
+						<h3 class="card-title">{{CanPro1}}</h3>
+
+						<div class="card-tools">
+							<button type="button" data-ng-click="btnEditClick()"
+								class="btn btn-tool" data-card-widget="collapse"
+								data-toggle="tooltip" title="Collapse">
+								<i class="fas fa-minus mb-2"></i>
+							</button>
+						</div>
+					</div>
+					<!--end-Titleform-->
+					<!--colform-->
+					<div class="card-body px-2 py-2">
+						<form>
+							<div class="row">
+								<!--column1-->
+								<div class="col-md-3 col-sm-12">
+									<div class="col-md-12 mt-2 col-sm-12">
+										<label for="exampleInputEmail1">{{CanPro2}}</label> <input
+											type="hoten" class="form-control" id="exampleInputEmail1"
+											placeholder="{{CanPro2}}" data-ng-model="fullname">
+									</div>
+									<div class="col-md-12 small text-danger">{{fulnameMessage}}</div>
+									<div class="col-md-12 mt-2 pt-2 col-sm-12">
+										<label>{{CanPro5}}</label>
+										<div class="input-group">
+											<select class="form-control select2" style="width: 100%;"
+												data-ng-model="selectGender">
+												<option selected value="-1">-- {{CanPro6}} --</option>
+												<option ng-repeat="x in Gender" value="{{x.id}}">{{x.displayText}}
+												</option>
+											</select>
+
+										</div>
+									</div>
+								</div>
+								<!--end-column1-->
+								<!--column2-->
+								<div class="col-md-4 mt-2 col-sm-12">
+									<label class="col-md-12 col-sm-12">{{CanPro23}}</label>
+									<div class="col-md-12 col-sm-12">
+										<div class="row">
+											<div class="col-md-5 col-sm-5">
+												<div class="input-group date " id="reservationdate"
+													data-target-input="nearest">
+													<input type="text"
+														class="form-control datetimepicker-input"
+														data-target="#reservationdate" data-ng-model="firstDate" />
+													<div class="input-group-append"
+														data-target="#reservationdate"
+														data-toggle="datetimepicker">
+														<div class="input-group-text">
+															<i class="fas fa-angle-down"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-1 col-sm-1 pt-2 ml-1">~</div>
+											<div class="col-md-5 col-sm-5">
+												<div class="input-group date" id="reservationdate2"
+													data-target-input="nearest">
+													<input type="text"
+														class="form-control datetimepicker-input"
+														data-target="#reservationdate2" data-ng-model="lastDate" />
+													<div class="input-group-append"
+														data-target="#reservationdate2"
+														data-toggle="datetimepicker">
+														<div class="input-group-text">
+															<i class="fas fa-angle-down"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-1 col-sm-1"></div>
+											<div class="col-md-12 small text-danger">{{dateMessage}}</div>
+										</div>
+									</div>
+									<div class="row pl-2 pt-3">
+										<div class="col-md-5 col-sm-5">
+											<div class="form-group ">
+												<label>{{CanPro7}}</label>
+												<div class="input-group">
+													<select class="form-control select2" style="width: 100%;"
+														data-ng-model="selectMajors"
+														data-ng-change="changeMajors()">
+														<option selected value="-1">-- {{CanPro8}} --</option>
+														<option ng-repeat="x in Majors" value="{{x.id}}">{{x.displayText}}
+														</option>
+													</select>
+
+												</div>
+											</div>
+										</div>
+										<div class="col-md-1 col-sm-1"></div>
+										<div class="col-md-6 col-sm-6">
+											<div class="form-group ">
+												<label>{{CanPro9}}</label>
+												<div class="input-group">
+													<select class="form-control select2" style="width: 100%;"
+														data-ng-model="selectSpecial">
+														<option selected value="-1">-- {{CanPro10}} --</option>
+														<option ng-repeat="x in Special" value="{{x.id}}">{{x.displayText}}
+														</option>
+													</select>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2 col-sm-12">
+									<div class="col-md-12 mt-2 col-sm-12">
+										<div class="form-group">
+											<label>{{CanPro3}}</label>
+											<div class="input-group">
+												<select class="form-control select2" style="width: 100%;"
+													data-ng-model="selectRecruitment">
+													<option selected value="-1">-- {{CanPro4}} --</option>
+													<option ng-repeat="x in Recruitment" value="{{x.id}}">{{x.displayText}}
+													</option>
+												</select>
+
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 small text-danger">{{nomineeMessage}}</div>
+									<div class="col-md-12 mt-2 col-sm-12">
+										<div class="form-group">
+											<label>{{CanPro11}}</label>
+											<div class="input-group">
+												<select class="form-control select2" style="width: 100%;"
+													data-ng-model="selectStatus" data-target="#select">
+													<option selected value="-1">-- {{CanPro12}} --</option>
+													<option ng-repeat="x in Status" value="{{x.id}}">{{x.displayText}}
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-12">
+									<div class="form-group">
+										<label></label>
+										<div
+											class="button col-md-12 col-sm-12 text-md-left text-center mt-2 pt-2">
+											<button type="submit"
+												class="btn btn-success mr-2 btn-responsive"
+												data-ng-click="findCanProfile()" style="width: 120px">{{CanPro17}}</button>
+											<button type="button"
+												class="btn btn-success mr-2 ml-3 btn-responsive"
+												data-ng-click="delForm()">{{CanPro18}}</button>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+						<!--end-rowform-->
+					</div>
+
+				</div>
+
+			</section>
+			<section class="content">
+				<div class="card card-success">
+					<!--Titleform-->
+					<div class="card-header">
+						<h3 class="card-title">{{CanPro22}}</h3>
+					</div>
+					<!--end-Titleform-->
+					<!--colform-->
+					<div class="card-body px-2 py-2">
+						<form>
+							<div class="row">
+								<div class="button row mb-4 ml-3">
+									<div
+										class="button col-md-12 col-sm-12 text-md-left col-12 text-center mt-2">
+										<button type="submit" class="btn btn-success mr-2"
+											data-ng-click="exportCanPro()">{{CanPro20}}</button>
+										<button type="submit" class="btn btn-success mr-2"
+											data-ng-click="importCanPro()">{{CanPro19}}</button>
+										<span id="importFile"></span>
+									</div>
+									<div class="col-md-12 small text-center text-danger">{{importMessage}}</div>
+								</div>
+							</div>
+						</form>
+						<!--end-rowform-->
+						<div id="gridCanProfile" class="table-responsive pl-3"
+							style="height: 320px;"></div>
+
+						<div class="row">
+							<div class="col-md-6 my-3 pl-4">
+								<span>{{CanPro35}}</span> <select class="mx-3 px-3 py-1"
+									data-ng-model='limitValue' data-ng-change='changeValuelimit()'>
+									<option>5</option>
+									<option>10</option>
+									<option>15</option>
+									<option>20</option>
+								</select> <span>{{CanPro36}}</span>
+							</div>
+							<div class="col-md-6 my-3" id="paginateRole"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,102 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="card card-success card-tabs">
+	<!--navtab-->
+	<div class="card-header p-0 pt-1">
+		<ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+			<li class="nav-item"><a class="nav-link active"
+				id="custom-tabs-one-login-tab" data-toggle="pill"
+				href="custom-tabs-one-login" role="tab"
+				aria-controls="custom-tabs-one-login" aria-selected="true" >Đăng
+					nhập</a></li>
+		</ul>
+	</div>
+	<!--end.navtab-->
+	<!--contenttab-->
+	<div class="card-body">
+		<div class="tab-content" id="custom-tabs-one-tabContent">
+			<!--content-tab-login-->
+			<div class="tab-pane active" id="custom-tabs-one-login"
+				role="tabpanel" aria-labelledby="custom-tabs-one-login-tab">
+				<!-- Main content -->
+				<section class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<!-- left column -->
+							<div class="col-md-6 m-auto">
+								<!-- jquery validation -->
+								<div class="card card-success">
+									<div class="card-header">
+										<h3 class="card-title">Đăng nhập</h3>
+									</div>
+									<!-- /.card-header -->
+									<!-- form start -->
+									<form role="form" id="quickForm">
+										<div class="card-body">
+											<div class="form-group">
+												<label for="exampleInputEmail1">Tên hoặc email</label> <input
+													type="text" name="ID" class="form-control" id="ID"
+													placeholder="Enter name or email" data-ng-model="User">
+												<span class="small text-danger">{{userMessage}}</span>
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">Mật khẩu</label> <input
+													type="password" name="pass" class="form-control" id="pass"
+													placeholder="Enter password" data-ng-model="Password">
+												<span class="small text-danger">{{passMessage}}</span>
+											</div>
+											<div class="form-group">
+												<label for="lang">Ngôn ngữ</label> <select
+													class="form-control" id="lang" data-ng-model="dropDownLang">
+													<option data-ng-repeat=" x in langData"
+														value="{{x.langCode}}">{{x.displayText}}</option>
+
+												</select>
+											</div>
+											<div class="form-group mb-0">
+												<div class="custom-control custom-checkbox">
+													<input type="checkbox" name="terms" data-ng-model="remember" data-ng-click="clickRemember()"
+														class="custom-control-input" id="exampleCheck1"> <label
+														class="custom-control-label" for="exampleCheck1">Ghi
+														nhớ truy cập</label> <label class="float-right mr-2 afogortpass "><a
+														href="#!Forgot" target="_blank">Quên mật khẩu</a></label>
+												</div>
+											</div>
+										</div>
+										<!-- /.card-body -->
+										<div class="row card-footer text-center">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-6 col-6">
+														<button type="submit"
+															class="btnformlogin  btn btn-success"
+															data-ng-click="Login();">Đăng nhập</button>
+													</div>
+													<div class="col-md-6 col-6">
+														<button type="submit"
+															class="btnformlogin  btn btn-success ">Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!-- /.card -->
+							</div>
+							<!--/.col (left) -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.container-fluid -->
+				</section>
+				<!-- /.content -->
+			</div>
+			<!--end.content-tab-login-->
+			<!--content-tab-register-->
+			<div class="tab-pane" id="custom-tabs-one-register" role="tabpanel"
+				aria-labelledby="custom-tabs-one-register-tab"></div>
+			<!--end.content-tab-register-->
+		</div>
+	</div>
+	<!--contenttab-->
+	<!-- /.card -->
+</div>

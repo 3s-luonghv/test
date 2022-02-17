@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CLOCK</title>
+	<style type="text/css">
+		.clock {
+			margin: auto;
+			width: auto;
+			padding: 30px;
+			font-family: verdana;
+			font-size: 3em;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="clock text-success">
+		<span id="info-day"></span><br>
+		<span id="time"></span>
+	</div>
+	<script>
+		function clock() {
+			var
+				timer = new Date(),
+				days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+				date = timer.getDate(),
+				month = timer.getMonth() + 1,
+				year = timer.getFullYear(),
+				day = days[timer.getDay()],
+				hour = timer.getHours(),
+				minute = timer.getMinutes(),
+				second = timer.getSeconds(),
+				timeshow = document.getElementById("time"),
+				x;
+
+			if (date < 10) {
+				date = "0" + date;
+			}
+			if (month < 10) {
+				month = "0" + month;
+			}
+			if (hour < 12) {
+				x = "AM"
+			} else { x = "PM" }
+
+			if (minute < 10) {
+				minute = "0" + minute;
+			}
+			if (second < 10) {
+				second = "0" + second;
+			}
+			if(document.getElementById("info-day")){
+				document.getElementById("info-day").innerHTML = day + " " + date + "/" + month + "/" + year;
+				timeshow.innerHTML = hour + ":" + minute + ":" + second + x;
+				setTimeout("clock()", 1000);
+			}
+			
+		}
+		clock();
+	</script>
+</body>
+
+</html>

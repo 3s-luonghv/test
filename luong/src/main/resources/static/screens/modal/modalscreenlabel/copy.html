@@ -1,0 +1,27 @@
+<div class="modal-content">
+	<!--modal header-->
+	<div class="modal-header f_title py-1 bg-success">
+		<h6 class="modal-title ">{{Label17}}</h6>
+		<button type="button" class="close" data-ng-click="fnCloseCopy(this)">&times;</button>
+	</div>
+	<!--modal boy-->
+	<form>
+		<div class="modal-body">		
+           <div class="row pb-3 pr-3">
+				<label for="modaledit3" class="col-4 mt-2">{{Label13}}<span
+					class="text-danger">*</span>:
+				</label> <select
+					class="form-control select2 col-8 form-control border border-success"
+					id="modaledit3" style="width: 100%;" data-ng-model="selectscreenscopy"  data-ng-change="changescreens()">
+					<option data-ng-repeat="x in screensdropdown" value="{{x.id}}">{{x.displayText}}</option>
+				</select>
+			</div> 			
+		<div class="modal-footer justify-content-center py-1">			
+			<button type="button" class="btn btn-success"
+				data-ng-click="fnCopylabel()">{{Label11}}</button>
+			<button type="button" class="btn btn-success"
+				data-ng-click="fnCloseCopy()">{{Label18}}</button>
+		</div>
+		</div>
+	</form>
+</div>

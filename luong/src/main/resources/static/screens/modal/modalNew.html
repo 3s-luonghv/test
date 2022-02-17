@@ -1,0 +1,118 @@
+<div class="card card-success card-tabs">
+	<section class="content">
+		<div class="card card-success">
+			<div class="card-header f_title py-1 bg-success">
+				<h3 class="card-title">Cập nhật thông tin kỹ năng</h3>
+				<div class="card-tools">
+					<button type="button" class="close" data-ng-click="closee()">&times;</button>
+				</div>
+			</div>
+
+			<div class="card-body px-2 py-2">
+				<form>
+					<div class="row">
+						<div class="col-md-2  form-group mb-0">
+							<label for="ch.mon">Nhóm chuyên môn</label>
+							<div class="input-group">
+
+								<select id="ch.mon" class="form-control select2"
+									style="width: 100%;" data-ng-model="selectcSpecialize">
+
+									<option ng-repeat="x in Specialize" value="{{x.id}}">{{x.displayText}}</option>
+								</select>
+								<div class="input-group-append">
+									<button data-ng-click="btnOpenModalSpecialize()"
+										class="input-group-text">
+										<i class="fa fa-plus"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-7 col-lg-7">
+							<div class="row ">
+								<div class="col-md-4 col-lg-5 form-group mb-0 pl-0">
+									<label for="skill">Tên kỹ năng</label>
+									<div class="input-group">
+										<select id="skill" class="form-control select2"
+											data-ng-model="selectSkillname">
+											<option ng-repeat="x in Skillname" value="{{x.id}}">{{x.displayText}}</option>
+
+										</select>
+										<div class="input-group-append">
+											<button data-ng-click="btnOpenModalSkillname()"
+												class="input-group-text">
+												<i class="fa fa-plus"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-5 col-lg-4 form-group mb-0">
+									<label for="timeexp1">Thời gian kinh nghiệm</label>
+									<div class="d-flex">
+										<input type="text" id="timeexp1"
+											class="form-control text-center mr-1 p-0"><i>năm</i>
+										<input type="text" id="timeexp2"
+											class="form-control text-center mx-1 p-0"><i>tháng</i>
+									</div>
+								</div>
+								<div class="col-md-3 col-lg-3 form-group mb-0 pr-0">
+
+									<label for="level">Trình độ/bậc</label>
+									<div class="input-group">
+										<select id="level" class="form-control select2"
+											data-ng-model="selectLevel">
+											<option ng-repeat="x in Level" value="{{x.id}}">{{x.displayText}}</option>
+										</select>
+										<div class="input-group-append">
+											<button data-ng-click="btnOpenModalLevel()"
+												class="input-group-text">
+												<i class="fa fa-plus"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 bg-light mt-1">
+									<div class="row">
+										<div class="col-md-2">
+											<em>Java Core</em>
+										</div>
+										<div class="col-md-10">
+											<em>trình độ Beginer là đã học kiến thức cơ bản, chưa
+												thực hành thực tế. Cần thời gian trainning thêm để có thểm
+												làm được.</em>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-2 col-lg-3 form-group mb-0">
+							<label for="note">Ghi Chú</label>
+							<textarea id="note" class="form-control" rows="3"></textarea>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+	</section>
+	<div class="row px-2">
+			<div class="col-md-2 ">
+				<button type="button" class="btn-success form-control my-2">Lưu
+					và thêm</button>
+			</div>
+			<div class="col-md-2">
+				<button type="reset" class="btn-success form-control my-2">Lưu
+					và đóng</button>
+			</div>
+			<div class="col-md-2">
+				<button data-ng-click="closee()" type="reset" class="btn-success form-control my-2"> Đóng</button>
+			</div>
+
+	</div>
+
+
+
+</div>

@@ -1,0 +1,54 @@
+<div class="modal-content">
+	<!--modal header-->
+	<div class="modal-header f_title py-1 bg-success">
+		<h6 class="modal-title ">{{TitleModal}}</h6>
+	</div>
+	<!--modal boy-->
+	<form>
+		<div class="modal-body">
+			<div class="row pb-3 pr-3">
+				<label for="modaledit1" class="col-4 mt-2">{{role13}}<span
+					class="red">*</span>:
+				</label> <input type="text"
+					class="col-8 form-control border border-success " id="modaledit2"
+					maxlength="100" data-ng-model="coderole">
+			</div>
+			<div class="text-danger">{{SttCodeRoleMessage}}</div>
+			<div class="row pb-3 pr-3">
+				<label for="modaledit1" class="col-4 mt-2">{{role6}}<span
+					class="red">*</span>:
+				</label> <select class="col-8 form-control border border-success "
+					id="sttUseFlag" data-ng-model="StatusGroupList" >
+					<option data-ng-repeat="x in StatusList" value={{x.code}}>{{x.displayText}}</option>
+				</select>
+			</div>
+			<div class="text-danger">{{SttStatusMessage}}</div>
+			<div class="row pb-3 pr-3">
+				<label for="lang" class="col-4 mt-2">{{role5}}</label> <select
+					class="col-8 form-control border border-success "
+					data-ng-model="languageGroup" data-ng-change = "Langchange()">
+					<option  value="">{{role24}}</option>
+					<option data-ng-repeat="x in LangList"  value = {{x.langCode}}>{{x.displayText}}</option>
+				</select>
+			</div>
+			<div class="text-danger">{{SttlanguageMessage}}</div>
+			<div class="row pb-3 pr-3">
+				<label for="modaledit3" class="col-4 mt-2">{{role4}}<span
+					class="red">*</span>:
+				</label> <input type="text"
+					class="col-8 form-control border border-success " id="modaledit3"
+					maxlength="100" data-ng-model="NameRole">
+			</div>
+			<div class="text-danger">{{SttNameRoleMessage}}</div>
+		</div>
+		<div class="modal-footer justify-content-center py-1">
+			<button type="button" class="btn btn-success"
+				data-ng-click="SaveAndNext()">{{role16}}</button>
+			<button type="button" class="btn btn-success"
+				data-ng-click="SaveAndAdd()">{{role17}}</button>
+			<button type="button" class="btn btn-success"
+				data-ng-click="SaveAndClose()">{{role18}}</button>
+			<button type="button" class="btn btn-success" data-ng-click="close()">{{role19}}</button>
+		</div>
+	</form>
+</div>

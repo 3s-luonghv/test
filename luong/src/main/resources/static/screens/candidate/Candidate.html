@@ -1,0 +1,82 @@
+<div class="card card-success card-tabs mb-0">
+
+	<div class="card-header p-0 pt-1">
+		<ul class="nav nav-tabs " id="custom-tabs-one-tab" role="tablist">
+			<li class="nav-item "><a class="nav-link {{showTabInfo}}"
+				id="custom-tabs-one-ttin-tab" data-toggle="pill"
+				href="custom-tabs-one-ttin" role="tab"
+				aria-controls="custom-tabs-one-ttin" aria-selected="false"
+				data-ng-click="clickTab('info');" data-ng-class="{active:isActiveTabCadidate('info')}"> Thông tin chung </a></li>
+			<li class="nav-item"><a class="nav-link {{showTabTranning}} "
+				id="custom-tabs-one-dtao-tab" data-toggle="pill"
+				href="custom-tabs-one-dtao" role="tab"
+				aria-controls="custom-tabs-one-dtao" aria-selected="false"
+				data-ng-click="clickTab('tranning');" data-ng-hide="isDisabledTranning" data-ng-class="{active:isActiveTabCadidate('tranning')}" >Đào tạo</a></li>
+			<li class="nav-item"><a class="nav-link {{showTabSkills}}"
+				id="custom-tabs-one-nluc-tab" data-toggle="pill"
+				href="custom-tabs-one-nluc" role="tab"
+				aria-controls="custom-tabs-one-nluc" aria-selected="false"
+				data-ng-click="clickTab('skill');" data-ng-hide="isDisabledSkill" data-ng-class="{active:isActiveTabCadidate('skill')}">Năng lực</a></li>
+			<li class="nav-item"><a class="nav-link "
+				id="custom-tabs-one-exp-tab" data-toggle="pill"
+				href="custom-tabs-one-exp" role="tab"
+				aria-controls="custom-tabs-one-exp" aria-selected="false"
+				data-ng-click="clickTab('exp');" data-ng-hide="isDisabledExp">Kinh
+					nghiệm</a></li>
+			<li class="nav-item"><a class="nav-link "
+				id="custom-tabs-one-evaluate-tab" data-toggle="pill"
+				href="custom-tabs-one-evaluate" role="tab"
+				aria-controls="custom-tabs-oneevaluate" aria-selected="false"
+				data-ng-click="clickTab('evaluate');" data-ng-hide="isDisabledEvaluate">Đánh giá hồ sơ</a></li>
+
+		</ul>
+	</div>
+
+
+	<div class="tab-content " id="custom-tabs-four-tabContent">
+		<div class="tab-pane {{showTabInfo}}" id="custom-tabs-one-ttin"
+			role="tabpanel" aria-labelledby="custom-tabs-one-ttin-tab" data-ng-class="{active:isActiveTabCadidate('info')}">
+			<div class="infomation ">
+				<div data-ng-include="'screens/candidate/profileGeneral/ProfileGeneral.html'"></div>
+			</div>
+		</div>
+		<div class="tab-pane" id="custom-tabs-one-ttin"
+			role="tabpanel" aria-labelledby="custom-tabs-one-dtao-tab" data-ng-class="{active:isActiveTabCadidate('tranning')}">
+			<div class="tranning ">
+				<div data-ng-include="'screens/candidate/train/Train.html'"></div>
+			</div>
+		</div>
+
+		<!--content-tag-nangluc-->
+		<div class="tab-pane " id="custom-tabs-one-nluc"
+			role="tabpanel" aria-labelledby="custom-tabs-one-nluc-tab" data-ng-class="{active:isActiveTabCadidate('skill')}">
+			<div class="skill ">
+				<div data-ng-include="'screens/candidate/skills/Skills.html'"></div>
+			</div>
+		</div>
+		<!--end.content-tag-nangluc-->
+
+		<div class="tab-pane " id="custom-tabs-one-exp"
+			role="tabpanel" aria-labelledby="custom-tabs-one-exp-tab" data-ng-class="{active:isActiveTabCadidate('exp')}">
+
+			<div class="exp ">
+				<div data-ng-include="'screens/candidate/exp/Exp.html'"></div>
+			</div>
+		</div>
+		
+		<div class="tab-pane " id="custom-tabs-one-exp"
+			role="tabpanel" aria-labelledby="custom-tabs-one-evaluate-tab" data-ng-class="{active:isActiveTabCadidate('evaluate')}">
+
+			<div class="exp ">
+				<div data-ng-include="'screens/candidate/evaluate/Evaluate.html'"></div>
+			</div>
+		</div>
+
+		<!-- /.card -->
+	</div>
+
+
+</div>
+<!-- /.content -->
+
+<!-- Main Footer -->

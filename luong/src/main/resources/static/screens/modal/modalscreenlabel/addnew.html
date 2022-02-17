@@ -1,0 +1,71 @@
+<div class="modal-content">
+	<!--modal header-->
+	<div class="modal-header f_title py-1 bg-success">
+		<h6 class="modal-title ">{{Label19}}</h6>
+		<button type="button" class="close" data-ng-click="fnCloseAdd(this)">&times;</button>
+	</div>
+	<!--modal boy-->
+	<form>
+		<div class="modal-body">
+
+			
+           <div class="row pb-3 pr-3">
+				<label for="modaledit3" class="col-4 mt-2">{{Label13}}<span
+					class="text-danger">*</span>:
+				</label> <select
+					class="form-control select2 col-8 form-control border border-success"
+					id="modaledit3" style="width: 100%;" data-ng-model="selectscreens"  data-ng-change="changescreens()">
+					<option data-ng-repeat="x in screensdropdown" value="{{x.id + ''}}">{{x.displayText}}</option>
+				</select>
+			</div> 
+			<div class="row pb-3 pr-3">
+				<label for="modaledit2" class="col-4 mt-2" >{{Label15}}<span
+					class="text-danger">*</span>:
+				</label> <input type="text"
+					class="col-8 form-control border border-success " id="modaledit3"
+					maxlength="" data-ng-model="codeNumber"  name="code">
+				<div class="col-4"></div>
+				<div class="col-8 small text-danger">{{codeMessage}}</div>
+
+			</div>
+			<div class="row pb-3 pr-3">
+				<label for="modaledit2" class="col-4 mt-2">{{Label5}}<span
+					class="text-danger">*</span>:
+				</label> <select
+					class="form-control select2 col-8 form-control border border-success"
+					id="modaledit2" style="width: 100%;" data-ng-model="selectstt">
+					<option data-ng-repeat="x in sttdropdown" value="{{x.code}}">{{x.displayText}}</option>
+				</select>
+			</div>
+			 <div class="row pb-3 pr-3">
+				<label for="modaledit3" class="col-4 mt-2">{{Label4}}<span
+					class="text-danger">*</span>:
+				</label> <select
+					class="form-control select2 col-8 form-control border border-success"
+					id="modaledit3" style="width: 100%;" data-ng-model="selectlanguage"  data-ng-change="changeLangRole()">
+					<option data-ng-repeat="x in languagedropdown" value="{{x.langCode}}">{{x.displayText}}</option>
+				</select>
+			</div> 
+			<div class="row pb-3 pr-3">
+				<label for="modaledit2" class="col-4 mt-2">{{Label20}}<span
+					class="text-danger">*</span>:
+				</label> <input type="text"
+					class="col-8 form-control border border-success " id="modaledit6"
+					maxlength="" data-ng-model="nameValue">
+				<div class="col-4"></div>
+				<div class="col-8 small  text-danger">{{nameMessage}}</div>
+			</div>
+
+		</div>
+		<div class="modal-footer justify-content-center py-1">
+			<button type="button" class="btn btn-success"
+				data-ng-click="fnSaveAdd_Continue(this)">{{Label21}}</button>
+			<button type="button" class="btn btn-success"
+				data-ng-click="fnSaveAdd_Clear(this)">{{Label22}}</button>
+			<button type="button" class="btn btn-success"
+				data-ng-click="fnSaveAdd_Close(this)">{{Label23}}</button>
+			<button type="button" class="btn btn-success"
+				data-ng-click="fnCloseAdd(this)">{{Label24}}</button>
+		</div>
+	</form>
+</div>

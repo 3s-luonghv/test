@@ -1,0 +1,199 @@
+
+<div class="filter">
+
+	<div class="modal-header f_title py-1 bg-success p-3">
+		<h5 class="modal-title">{{modalTitle}}</h5>
+		<button type="button" class="close" data-ng-click="closeAdnewCatIModal()">&times;</button>
+	</div>
+	<!-- /.card-header -->
+	<div class="card-body">
+
+		<form action="">
+			<div class="row">
+				<div class="col-4">
+					<div class="form-group">
+						<label>Trình độ đào tạo</label>
+						<div class="input-group mb-3">
+							<select class="form-control select2 select2-hidden-accessible"
+								data-ng-model="DegreeTraining" style="width: 100%;"
+								data-select2-id="1" tabindex="-1" aria-hidden="true">
+								<option data-ng-repeat="x in degreeTraining" value="{{x.id}}">{{x.displayText}}</option>
+
+
+							</select>
+							<div class="input-group-append">
+								<button class="input-group-text"
+									data-ng-click="insertDegreetraining()">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="row">
+						<div class="form-group col-12 mb-1">
+						<label>Nơi đào tạo</label>
+						<div class="input-group mb-3">
+							<input class="form-control select2 select2-hidden-accessible"
+								data-ng-model="TrainingPlaces" style="width: 100%;"
+								data-select2-id="1" tabindex="-1" aria-hidden="true">
+						</div>
+					</div>
+					<div class="col-12 small text-danger">{{placeMess}}</div>
+					</div>
+					
+				</div>
+				<div class="col-4">
+				<div class="row">
+				<div class="col-12">
+				<div class="form-group">
+						<label>Thời gian đào tạo</label>
+						<div class="form-inline row">
+							<div class="input-group date col-6" id="reservationdate_start"
+								data-target-input="nearest">
+								<input type="text" class="form-control datetimepicker-input"
+									data-target="#reservationdate_start" data-ng-model="FromDate">
+								<div class="input-group-append"
+									data-target="#reservationdate_start"
+									data-toggle="datetimepicker">
+									<div class="input-group-text">
+										<i class="fa fa-calendar" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+							<div class="input-group date col-6" id="reservationdate_end"
+								data-target-input="nearest">
+								<input type="text" class="form-control datetimepicker-input"
+									data-target="#reservationdate_end" data-ng-model="ToDate">
+								<div class="input-group-append"
+									data-target="#reservationdate_end" data-toggle="datetimepicker">
+									<div class="input-group-text">
+										<i class="fa fa-calendar" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 small text-danger">{{timeMess}}</div>
+				</div>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<div class="form-group">
+						<label>Lĩnh vực</label>
+						<div class="input-group mb-3">
+							<select class="form-control select2 select2-hidden-accessible"
+								data-ng-model="FieldsOfStudy" style="width: 100%;"
+								data-select2-id="1" tabindex="-1" aria-hidden="true" data-ng-change="changeSpecializedTraning()">
+								<option data-ng-repeat="x in fieldsOfStudy" value="{{x.id}}">{{x.displayText}}</option>
+
+							</select>
+							<div class="input-group-append">
+								<button class="input-group-text"
+									data-ng-click="insertFieldsOfStudy()">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+						<label>Chuyên ngành</label>
+						<div class="input-group mb-3">
+							<select class="form-control select2 select2-hidden-accessible"
+								data-ng-model="Specialized" style="width: 100%;"
+								data-select2-id="1" tabindex="-1" aria-hidden="true">
+								<option data-ng-repeat="x in specialized" value="{{x.id}}">{{x.displayText}}</option>
+							</select>
+							<div class="input-group-append">
+								<button class="input-group-text"
+									data-ng-click="insertSpecialized()">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="form-group">
+						<label>Hệ đào tạo</label>
+						<div class="input-group mb-3">
+							<select class="form-control select2 select2-hidden-accessible"
+								data-ng-model="TrainingSystem" style="width: 100%;"
+								data-select2-id="1" tabindex="-1" aria-hidden="true">
+								<option data-ng-repeat="x in trainingSystem" value="{{x.id}}">{{x.displayText}}</option>
+
+							</select>
+							<div class="input-group-append">
+								<button class="input-group-text"
+									data-ng-click="insertTrainingSystem()">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<div class="form-group">
+						<label>Xếp hạng</label>
+						<div class="input-group mb-3">
+							<select class="form-control select2 select2-hidden-accessible"
+								data-ng-model="Ratings" style="width: 100%;" data-select2-id="1"
+								tabindex="-1" aria-hidden="true">
+								<option data-ng-repeat="x in ratings" value="{{x.id}}">{{x.displayText}}</option>
+
+							</select>
+							<div class="input-group-append">
+								<button class="input-group-text" data-ng-click="insertRatings()">
+									<i class="fa fa-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+
+						<div class="form-group">
+							<label for="exampleInputFile">Văn bằng scan</label>
+							<div class="input-group">
+								<div class="custom-file ">
+									<input type="file"
+										onchange="angular.element(this).scope().setFile(this)">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="form-group">
+						<label>Remark</label>
+						<textarea class="form-control" rows="3" placeholder="" data-ng-model="Remark"></textarea>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="button row ml-1">
+			<input type="button" class="btn btn-success ml-2"
+				data-ng-click="saveNadd()" value="Lưu và thêm"></input> <input
+				type="button" class="btn btn-success ml-2"
+				data-ng-click="saveNclose()" value="Lưu và đóng"></input>
+			<input class="btn btn-success ml-2" type="reset"
+				data-ng-click="closeAdnewCatIModal()" value="Đóng"></input>
+		</div>
+
+
+
+	</div>
+	<!-- /.card-body -->
+
+
+
+</div>

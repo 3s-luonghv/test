@@ -1,0 +1,132 @@
+
+
+	<section class="content">
+		<div class="card card-success">
+			<div class="card-header f_title py-1 bg-success">
+				<h3 class="card-title">Chỉnh sửa thông tin kỹ năng</h3>
+				<div class="card-tools">
+					<button type="button" class="close"
+						data-ng-click="closeAdnewCatIModaledit()">&times;</button>
+				</div>
+			</div>
+
+			<div class="card-body px-2 py-2">
+				<form>
+					<div class="row">
+						<div class="col-md-12  form-group mb-0">
+							<label for="ch.mon">Nhóm chuyên môn</label>
+							<div class="input-group">
+
+								<select id="ch.mon" class="form-control select2"
+									style="width: 100%;" data-ng-change="changemodalskillNamedit()"
+									data-ng-model="Specializeselect">
+
+									<option ng-repeat="x in Specializedit" value="{{x.id}}">{{x.displayText}}</option>
+								</select>
+								<div class="input-group-append">
+									<button data-ng-click="btnOpenModalSpecialize()"
+										class="input-group-text"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row">
+						<div class="col-md-12 form-group ">
+							<label for="skill">Tên kỹ năng</label>
+							<div class="input-group">
+								<select id="skill" class="form-control select2"
+									data-ng-model="Skillname">
+									<option ng-repeat="x in Skillnamedit" value="{{x.id}}">{{x.displayText}}</option>
+
+								</select>
+								<div class="input-group-append">
+									<button data-ng-click="btnOpenModalSkillname()"
+										class="input-group-text"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12  form-group ">
+							<label for="timeexp1">Thời gian kinh nghiệm</label>
+							<div class="d-flex">
+								<input type="text" id="timeexp1"
+									class="form-control text-center mr-1 p-0"
+									data-ng-model="YearExp"><i>năm</i> <input type="text"
+									id="timeexp2" class="form-control text-center mx-1 p-0"
+									data-ng-model="MonThexp"><i>tháng</i>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 form-group ">
+
+							<label for="level">Trình độ/bậc</label>
+							<div class="input-group">
+								<select id="level" class="form-control select2"
+									data-ng-model="Level">
+									<option ng-repeat="x in Leveledit" value="{{x.id}}">{{x.displayText}}</option>
+								</select>
+								<div class="input-group-append">
+									<button data-ng-click="btnOpenModalLevel()"
+										class="input-group-text"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12">
+							<label for="start1">Thời gian từ</label>
+							<div class="input-group fromdate" id="fromdate"
+								data-target-input="nearest">
+								<input id="start1" type="text" data-target="#fromdate"
+									data-ng-model="fromdate"
+									class="form-control datetimepicker-input" />
+								<div class="input-group-append" data-target="#fromdate"
+									data-toggle="datetimepicker">
+									<div class="input-group-text">
+										<i class="fa fa-calendar"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<label for="start2">Đến</label>
+							<div class="input-group todate" id="todate"
+								data-target-input="nearest">
+								<input id="start2" type="text" data-target="#todate"
+									data-ng-model="todate"
+									class="form-control datetimepicker-input" />
+								<div class="input-group-append" data-target="#todate"
+									data-toggle="datetimepicker">
+									<div class="input-group-text">
+										<i class="fa fa-calendar"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row px-2">
+		<div class="col-md-4 ">
+			<button type="button" data-ng-click="saveSkillEdit()"
+				class="btn-success form-control my-2">Lưu</button>
+		</div>
+		<div class="col-md-4">
+			<button data-ng-click="closeAdnewCatIModaledit()" type="reset"
+				class="btn-success form-control my-2">Đóng</button>
+		</div>
+
+	</div>
+				</form>
+			</div>
+		</div>
+
+	</section>
+	
+
+

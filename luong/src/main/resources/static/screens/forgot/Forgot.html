@@ -1,0 +1,96 @@
+<!-- Content Wrapper. Contains page content -->
+
+
+<div class="card card-success card-tabs">
+	<!--navtab-->
+	<div class="card-header p-0 pt-1">
+		<ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+			<li class="nav-item"><a class="nav-link active"
+				id="custom-tabs-one-forgotpass-tab" data-toggle="pill" role="tab"
+				aria-controls="custom-tabs-one-forgotpass" aria-selected="false">{{forgotLabel0}}Quên
+					mật khẩu</a></li>
+		</ul>
+	</div>
+	<!--end.navtab-->
+	<!--contenttab-->
+	<div class="card-body">
+		<div class="tab-content" id="custom-tabs-one-tabContent">
+			<!--content-tab-login-->
+			<div class="tab-pane show active" id="custom-tabs-one-forgotpass"
+				role="tabpanel" aria-labelledby="custom-tabs-one-forgotpass-tab">
+				<!-- Main content -->
+				<section class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<!-- left column -->
+							<div class="col-md-6 m-auto">
+								<!-- jquery validation -->
+								<div class="card card-success">
+									<div class="card-header">
+										<h3 class="card-title">{{forgotLabel0}}Quên Mật Khẩu</h3>
+									</div>
+									<!-- /.card-header -->
+									<!-- form start -->
+									<form role="form" id="quickForm">
+										<div class="card-body">
+											<div class="form-group">
+												<label for="InputID">{{forgotLabel1}}Tên Đăng Nhập:</label> <input
+													type="text" class="form-control" id="InputID"
+													placeholder="Enter Username" data-ng-model="ForgotUser">
+												<div class="row">
+													<div class="col-md-6 small text-danger mt-2">{{messageUser}}</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="InputEmail">{{forgotLabel2}}Email:</label> <input type="text"
+													class="form-control" id="InputEmail"
+													placeholder="Enter Email" data-ng-model="ForgotEmail">
+												<div class="row">
+													<div class="col-md-6 small text-danger mt-2">{{messageEmail}}</div>
+												</div>
+											</div>
+
+										</div>
+										<!-- /.card-body -->
+										<div class="row card-footer text-center">
+											<div class="col-md-12">
+												<div class="row">
+													<div class="col-md-6 col-6">
+														<button type="submit"
+															class="btnformlogin  btn btn-success"
+															data-ng-click="Confirm();">{{forgotLabel3}}Xác Nhận</button>
+													</div>
+													<div class="col-md-6 col-6">
+														<button type="submit"
+															class="btnformlogin  btn btn-success"
+															data-ng-click="Cancel();">{{forgotLabel4}}Hủy bỏ</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!-- /.card -->
+							</div>
+							<!--/.col (left) -->
+						</div>
+						<!-- /.row -->
+					</div>
+					<!-- /.container-fluid -->
+				</section>
+				<!-- /.content -->
+			</div>
+			<!--end.content-tab-login-->
+			<!--content-tab-forgotpass-->
+			<div class="tab-pane" id="custom-tabs-one-forgotpass" role="tabpanel"
+				aria-labelledby="custom-tabs-one-forgotpass-tab"></div>
+			<!--end.content-tab-forgotpass-->
+			<!--content-tab-register-->
+			<div class="tab-pane" id="custom-tabs-one-register" role="tabpanel"
+				aria-labelledby="custom-tabs-one-register-tab"></div>
+			<!--end.content-tab-register-->
+		</div>
+	</div>
+	<!--contenttab-->
+	<!-- /.card -->
+</div>
