@@ -34,6 +34,7 @@ private Long workID;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.statusID = status;
+		
 	}
 	
 	public WorknoteResponse( Worknote entity) {
@@ -41,9 +42,9 @@ private Long workID;
 		this.workID = entity.getWorkID();
 		this.name =  entity.getName();
 		this.startDate = entity.getStartDate();
-		this.endDate = entity.getEndDate();
-		
+		this.endDate = entity.getEndDate();	
 		this.statusID = entity.getStatus().getStatusID();
+		this.statusName = entity.getStatus().getName();
 		
 	}
 
